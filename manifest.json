@@ -1,0 +1,18 @@
+{
+   "manifest_version": 2,
+   "name": "VK Workmode",
+   "version": "1.1",
+   "description": "Скрытие отвлекающих, манящих и соблазняющих элементов VK с целью сохранения концентрации.",
+   "icons": {
+       "128": "logo128.png"
+   },
+   "browser_action": {
+    "default_popup": "popup.html"
+   },
+   "content_scripts": [
+       {
+           "matches": [ "https://vk.com/*" ],
+           "js": [ "work.js" ]
+       }
+   ]
+}
