@@ -1,25 +1,30 @@
+window.addEventListener("load", () => {
+    const turnOn = () => {
+        const news = document.getElementById("l_nwsf");
+        const photo = document.getElementById("l_ph");
+        const audio = document.getElementById("l_aud");
+        const video = document.getElementById("l_vid");
+        const clips = document.getElementById("l_svd");
+        const games = document.getElementById("l_ap");
+        const mini_apps = document.getElementById("l_mini_apps");
+        const favs = document.getElementById("l_fav");
+        const audioplayer = document.getElementById("top_audio_player");
+        const notif = document.getElementById("top_notify_btn");
 
-window.addEventListener('load', function chich() {
-	//myStorage = this.window.localStorage;
-	function turnOn(){
-		let news = document.getElementById('l_nwsf');
-		let photo = document.getElementById('l_ph');
-		let audio = document.getElementById('l_aud');
-		let video = document.getElementById('l_vid');
-		let clips = document.getElementById('l_svd');
-		let games = document.getElementById('l_ap');
-		let mini_apps = document.getElementById('l_mini_apps');
-		let favs = document.getElementById('l_fav');
-		let audioplayer = document.getElementById('top_audio_player');
-		let notif = document.getElementById('top_notify_btn');
+        const array = [
+            news,
+            photo,
+            audio,
+            video,
+            clips,
+            games,
+            mini_apps,
+            favs,
+            audioplayer,
+            notif,
+        ];
 
-		let array = [news,photo,audio,video,clips,games,mini_apps,favs,audioplayer,notif]
-		console.log(array);
-		array.forEach(function(item, i, array){
-			if(item){
-				item.remove();
-			}
-		});
-	}
-	document.getElementById("sw_ch").addEventListener("click", turnOn);
-})
+        array.forEach((item) => item.remove());
+    };
+    document.getElementById("sw_ch").addEventListener("click", turnOn);
+});
